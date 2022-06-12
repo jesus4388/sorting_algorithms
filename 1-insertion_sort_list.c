@@ -20,7 +20,7 @@ void insertion_sort_list(listint_t **list)
 				aux->prev = aux2->prev;
 			}
 			else
-				aux->prev = NULL;	
+				aux->prev = NULL;
 			if (aux->next)
 			{
 				aux2->next = aux->next;
