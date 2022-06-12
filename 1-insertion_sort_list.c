@@ -8,10 +8,9 @@ void insertion_sort_list(listint_t **list)
 	listint_t *aux = *list;
 	listint_t *aux2 = *list;
 
-	aux = aux->next;
 	while (aux)
 	{
-		while ((aux->n < aux->prev->n) && aux)
+		while (aux->prev && (aux->n < aux->prev->n))
 		{
 			aux2 = aux->prev;
 			if (aux2->prev)
@@ -31,11 +30,7 @@ void insertion_sort_list(listint_t **list)
 			aux2->prev = aux;
 			aux->next = aux2;
 			if (aux->prev == NULL)
-			{
 				*list = aux;
-				if (aux->next)
-					aux = aux->next;
-			}
 			print_list(*list);
 		}
 		aux = aux->next;
