@@ -5,27 +5,27 @@
  */
 void selection_sort(int *array, size_t size)
 {
-	size_t i = 0, j = 0, k = 0;
-	int tmp = 0, flag = 0;
+	size_t j = 0, k = 0;
+	int tmp = 0, flag = 0, pos = 0;
 
-	for(j = 0; j < size; i++)
+	for(j = 0; j < size; j++)
 	{
-		for(j = j, k = 1; array[j]; k++)
-		{
-			if((array[k] < array [j]) && flag == 0)
+		tmp = array[j];
+		for(j = j, k = j + 1; k < size; k++)
+		{	
+			if(array[k] < tmp)
 			{
 				tmp = array[k];
-				i = k;
-				array[k] = array[j];
-				array[j] = tmp;
+				pos = k;
 				flag = 1;
 			}
-			if((array[k] < array [tmp]) && flag == 1)
-			{
-				array[i] = array[k];
-				array[k] = tmp;
-				i = k;
-			}
+		}
+		if(flag == 1)
+		{
+			array[pos] = array[j];
+			array[j] = tmp;
+			print_array(array, size);
+			flag = 0;
 		}
 	}
 }
