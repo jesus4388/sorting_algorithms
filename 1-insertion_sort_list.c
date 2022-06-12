@@ -10,7 +10,7 @@ void insertion_sort_list(listint_t **list)
 
 	while (aux !=  NULL)
 	{
-		while ((aux->prev) && (aux->n < aux->prev->n))
+		while ((aux->prev) && (aux->n < aux->prev->n) && aux != NULL)
 		{
 			aux2 = aux->prev;
 			if (aux2->prev)
