@@ -2,7 +2,6 @@
 /**
  * insertion_sort_list - insertion sort list
  * @list: list
- *
  */
 void insertion_sort_list(listint_t **list)
 {
