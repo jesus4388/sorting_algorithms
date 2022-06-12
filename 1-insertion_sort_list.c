@@ -9,7 +9,7 @@ void insertion_sort_list(listint_t **list)
 	listint_t *aux2 = *list;
 
 	aux = aux->next;
-	whilei(aux)
+	while (aux)
 	{
 		while ((aux->n < aux->prev->n) && aux)
 		{
