@@ -1,3 +1,3 @@
 best case O(n^2)
-average case O(nlog(n)) 
-worst case O(nlog(n))
+average case O(n^2) 
+worst case O(n^2)
