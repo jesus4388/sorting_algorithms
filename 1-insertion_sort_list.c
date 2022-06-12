@@ -1,7 +1,7 @@
 #include "sort.h"
 /**
- *
- *
+ * insertion_sort_list - insertion sort list
+ * @list: list
  *
  */
 void insertion_sort_list(listint_t **list)
@@ -10,7 +10,7 @@ void insertion_sort_list(listint_t **list)
 	listint_t *aux2 = *list;
 
 	aux = aux->next;
-	while(aux)
+	whilei(aux)
 	{
 		while ((aux->n < aux->prev->n) && aux)
 		{
