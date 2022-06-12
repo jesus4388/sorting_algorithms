@@ -17,19 +17,11 @@ void insertion_sort_list(listint_t **list)
 		{
 			aux2 = aux->prev;
 			if (aux2->prev)
-			{
 				aux2->prev->next = aux;
-				aux->prev = aux2->prev;
-			}
-			else
-				aux->prev = NULL;
+			aux->prev = aux2->prev;
 			if (aux->next)
-			{
-				aux2->next = aux->next;
 				aux->next->prev = aux2;
-			}
-			else
-				aux2->next = NULL;
+			aux2->next = aux->next;
 			aux2->prev = aux;
 			aux->next = aux2;
 			if (aux->prev == NULL)
