@@ -33,7 +33,8 @@ void insertion_sort_list(listint_t **list)
 			if (aux->prev == NULL)
 			{
 				*list = aux;
-				aux = aux->next;
+				if (aux->next)
+					aux = aux->next;
 			}
 			print_list(*list);
 		}
