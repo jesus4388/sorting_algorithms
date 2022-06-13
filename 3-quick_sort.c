@@ -39,10 +39,15 @@ void quick_sort_sup(int *array, size_t size, int init, int end)
 		}
 		med = izq;
 		if (flag == 0)
+		{
 			quick_sort_sup(array, size, med, end);
+			quick_sort_sup(array, size, init, med - 1);
+		}
 		else
+		{
 			quick_sort_sup(array, size, med + 1, end);
-		quick_sort_sup(array, size, init, med - 1);
+			quick_sort_sup(array, size, init, med - 1);
+		}
 	}
 }
 /**
