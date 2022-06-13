@@ -35,7 +35,8 @@ void quick_sort_sup(int *array, size_t size, int init, int end)
 			tmp = array[izq];
 			array[izq] = array[pivot];
 			array[pivot] = tmp;
-			print_array(array, size);
+			if (array[pivot] != array[izq])
+				print_array(array, size);
 		}
 		med = izq;
 		if (flag == 0)
