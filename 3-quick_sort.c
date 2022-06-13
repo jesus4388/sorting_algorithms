@@ -39,6 +39,11 @@ void quick_sort_sup(int *array, size_t size, int init, int end)
 				print_array(array, size);
 		}
 		med = izq;
+		if (flag == 1)
+		{
+			quick_sort_sup(array, size, med, end);
+			quick_sort_sup(array, size, end, med);
+		}
 		if (flag == 0)
 			quick_sort_sup(array, size, med, end);
 		else
