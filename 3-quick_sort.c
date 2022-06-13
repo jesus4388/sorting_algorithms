@@ -30,7 +30,7 @@ void quick_sort_sup(int *array, size_t size, int init, int end)
 			}
 			der++;
 		}
-		if (flag == 1 && der == pivot)
+		if (flag == 1)
 		{
 			tmp = array[izq];
 			array[izq] = array[pivot];
